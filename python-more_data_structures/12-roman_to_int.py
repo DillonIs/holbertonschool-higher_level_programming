@@ -16,6 +16,7 @@ def value(roman):
         return 1000
     return -1
 
+
 def roman_to_int(roman_string):
     if not roman_string:
         return 0
@@ -40,6 +41,7 @@ def roman_to_int(roman_string):
             result += s1
         i += 1
     return result
+
 
 if __name__ == "__main__":
     roman_string = "IX"
