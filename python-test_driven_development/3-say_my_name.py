@@ -8,7 +8,7 @@ def say_my_name(first_name, last_name=""):
     """Variables:
     first_name(str): First name
     last_name(str): Last name
-    
+
     Raises:
         TypeError: If either name is not a string
     """
