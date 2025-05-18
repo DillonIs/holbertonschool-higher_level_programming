@@ -12,9 +12,9 @@ Importing the function say_my_name
 
 Passing first_name and last_name correctly
     >>> say_my_name("Isaac", "Dillon")
-    my name is Isaac Dillon
+    My name is Isaac Dillon
 
-    >>> say_my_name("Breezy")
+    >> say_my_name("Breezy")
     My name is Breezy
 
 Passing last_name as None
