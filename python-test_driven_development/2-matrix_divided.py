@@ -5,6 +5,7 @@ Function prototype:
     matrix_divided
 """
 
+
 def matrix_divided(matrix, div):
     """Variables:
         matrix: A list of lists of integers and/or floats
@@ -23,21 +24,22 @@ def matrix_divided(matrix, div):
 """
     row = None
     message = "matrix must be a matrix (list of lists) of integers/floats"
+    zero_msg = "division by zero"
     if not matrix or not isinstance(matrix, list):
         raise TypeError(message)
-    for index in matrix:
-        if not index or not isinstance(index, list):
+    for ind in matrix:
+        if not ind or not isinstance(ind, list):
             raise TypeError(message)
-        for value in index:
+        for value in ind:
             if not isinstance(value, int) and not isinstance(value, float):
                 raise TypeError(message)
         if row is None:
-            row = len(index)
-        elif row != len(index):
+            row = len(ind)
+        elif row != len(ind):
             raise TypeError("Each row of the matrix must have the same size")
     if not isinstance(div, int) and not isinstance(div, float):
         raise TypeError("div must be a number")
     if div == 0:
-        raise ZeroDivisionError("division by zero")
-    new_matrix = [[round(value / div, 2) for value in index] for index in matrix]
+        raise ZeroDivisionError(zero_msg)
+    new_matrix = [[round(value / div, 2) for value in ind] for ind in matrix]
     return new_matrix
