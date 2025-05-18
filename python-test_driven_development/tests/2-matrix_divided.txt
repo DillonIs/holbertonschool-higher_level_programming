@@ -76,3 +76,10 @@ Passing one argument to matrix_divided().
     Traceback (most recent call last):
 	    ...
     TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+Dividing None by None.
+    >>> matrix = None
+    >>> matrix_divided(matrix, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
