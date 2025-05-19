@@ -1,0 +1,68 @@
+# The ''5-text_indentation'' module
+===================================
+Usage of 5-text_indentation.py
+===================================
+
+Only one function defined as ''text_indentation()''
+
+''text_indentation()'' prints a text with 2 new lines after each separator
+separators are defined as sep in code and refer to . ? and :
+
+Importing the function text_indentation
+    >>> test_indentation = __import__('5-text_indentation').text_indentation
+
+Passing the given text
+    >>> test_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?""")
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    <BLANKLINE>
+    Quonam modo?
+    <BLANKLINE>
+    Utrum igitur tibi litteram videor an totas paginas commovere?
+    <BLANKLINE>
+
+Passing an empty string as text
+    >>> text_indentation("")
+
+Passing a text with space at the start
+    >>> text_indentation("  Hello world")
+    Hello world
+
+Passing a word with space around iter
+    >>> text_indentation("  Hello   ")
+    Hello
+
+Passing text with spaces and a special character
+    >>> text_indentation("     Hello      ?")
+    Hello?
+    <BLANKLINE>
+
+Passing text with space between words and a special character at the end
+    >>> text_indentation("Hi, how are you?     Good, thanks.")
+    Hi, how are you?
+    <BLANKLINE>
+    Good, thanks.
+    <BLANKLINE>
+
+Passing non-string as text
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Passing None as text
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+Passing no arguments to function
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Passing more than one argument to function
+    >>> text_indentation("Hello", "World") #doctest: +ELLIPSIS
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() takes 1 positional argument but ...
