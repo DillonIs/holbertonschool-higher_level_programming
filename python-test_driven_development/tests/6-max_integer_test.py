@@ -36,8 +36,7 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual(max_integer(test_list), None)
 
     def solo_arg(self):
-        test_list = [9]
-        self.assertEqual(max_integer(test_list), 9)
+        self.assertEqual(max_integer([9]), 9)
 
     def no_arg(self):
         with self.assertRaises(TypeError):
