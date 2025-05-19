@@ -94,3 +94,6 @@ class TestMaxInteger(unittest.TestCase):
     def character_list(self):
         test_list = ['a', 'c', 'd', 'v']
         self.assertEqual(max_integer(test_list), 'v')
+
+if __name__ == '__main__':
+    unittest.main()
