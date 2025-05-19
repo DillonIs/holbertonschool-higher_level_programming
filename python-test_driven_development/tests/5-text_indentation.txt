@@ -9,10 +9,10 @@ Only one function defined as ''text_indentation()''
 separators are defined as sep in code and refer to . ? and :
 
 Importing the function text_indentation
-    >>> test_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Passing the given text
-    >>> test_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?""")
+    >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?""")
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     <BLANKLINE>
     Quonam modo?
@@ -21,7 +21,8 @@ Passing the given text
     <BLANKLINE>
 
 Passing an empty string as text
-    >>> text_indentation("")
+    >>> text_indentation('')
+    
 
 Passing a text with space at the start
     >>> text_indentation("  Hello world")
