@@ -1,0 +1,13 @@
+# The ''7-base_geometry.py'' module
+===================================
+Usage of 7-base_geometry.py
+===================================
+
+Only one function defined as integer_validator()
+
+integer_validator: Validates the integer variable
+defined as value
+
+Importing the function:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
