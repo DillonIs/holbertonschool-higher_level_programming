@@ -57,3 +57,19 @@ Test when more than two arguments are passed
         ...
     TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
+Test when no arguments
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Test when trying to pass boolean values
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", True)
+
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", False)
+    Traceback (most recent call last):
+        ...
+    ValueError: name must be greater than 0
