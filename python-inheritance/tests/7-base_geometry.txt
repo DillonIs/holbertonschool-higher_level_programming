@@ -11,3 +11,49 @@ defined as value
 Importing the function:
     >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
+Test for when area is not NotImplemented
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+        ...
+    Exception: area() is not implemented
+
+Test when a non-integer is passed
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", "Isaac")
+    Traceback (most recent call last):
+        ...
+    TypeError: name must be an integer
+
+Test when value is negative
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", -9)
+    Traceback (most recent call last):
+        ...
+    ValueError: name must be greater than 0
+
+Test when value is 0
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: name must be greater than 0
+
+Test when value is positive
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 9)
+
+Test when only one argument is passed
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name")
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Test when more than two arguments are passed
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", 9, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
