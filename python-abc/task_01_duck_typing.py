@@ -30,7 +30,7 @@ class Circle(Shape):
     def __init__(self, radius):
         """Creates an instance of Circle
         with a given radius"""
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         """Finds and returns the area
