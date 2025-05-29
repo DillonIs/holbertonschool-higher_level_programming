@@ -12,11 +12,11 @@ class Fish:
     """
     def swim(self):
         """Prints The fish is swimming"""
-        return "The fish is swimming"
+        print("The fish is swimming")
 
     def habitat(self):
         """Prints The fish lives in water"""
-        return "The fish lives in water"
+        print("The fish lives in water")
 
 class Bird:
     """Class defined as Bird
@@ -26,26 +26,26 @@ class Bird:
     """
     def fly(self):
         """Prints The bird is flying"""
-        return "The bird is flying"
+        print("The bird is flying")
 
     def habitat(self):
         """Prints The bird lives in the sky"""
-        return "The bird lives in the sky"
+        print("The bird lives in the sky")
 
 class FlyingFish(Fish, Bird):
     """Class defined as FlyingFish
     Inherits from both Fish and Bird"""
     def fly(self):
         """Prints The flying fish is soaring!"""
-        return "The flying fish is soaring!"
+        print("The flying fish is soaring!")
 
     def swim(self):
         """Prints The flying fish is swimming!"""
-        return "The flying fish is swimming!"
+        print("The flying fish is swimming!")
 
     def habitat(self):
         """Prints The flying fish lives both in water and the sky!"""
-        return "The flying fish lives both in water and the sky!"
+        print("The flying fish lives both in water and the sky!")
 
 if __name__ == "__main__":
     flying_fish = FlyingFish()
