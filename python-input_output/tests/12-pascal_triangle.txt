@@ -5,7 +5,7 @@ Usage of 12-pascal_triangle.py
 
 Only one function is included and is defined as ''pascal_triangle()''
 
-''pascal_triangle()'' prints Pascal's Triangle n defines the size of the triangle.
+''pascal_triangle()'' prints a visual representation of Pascal's Triangle
 
 Importing the function pascal_triangle
     >>> pascal_triangle = __import__('12-pascal_triangle').pascal_triangle
