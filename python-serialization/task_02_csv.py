@@ -4,12 +4,12 @@ import csv
 import json
 
 
-def convert_csv_to_json(csv_file):
+def convert_csv_to_json(csv_filename):
     """Converts a csv file into a JSON file"""
     try:
         """Serializes and deserializes
         Returns True if serialisation and deserialization has occurred"""
-        with open('data.csv', 'r', encoding='utf-8') as csv_file:
+        with open(csv_filename, 'r', encoding='utf-8') as csv_file:
             csv_read = csv.DictReader(csv_file)
             data = [row for row in csv_read]
 
