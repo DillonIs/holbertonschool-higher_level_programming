@@ -38,11 +38,16 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
                 "description": "A simple API built with http.server"
             }
             self.wfile.write(json.dumps(data).encode('utf-8'))
+        elif self.path == "/undefined":
+            self.send_response(404)
+            self.send_header("Content-type", "text/plain")
+            self.end_headers()
+            self.wfile.write(b"Endpoint not found")
         else:
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
-            self.wfile.write("404 Not Found".encode())
+            self.wfile.write(b"404 Not Found")
 
 Handler = MyHandler
 
