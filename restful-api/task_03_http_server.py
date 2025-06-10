@@ -26,19 +26,19 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
                 "city": "New York"
             }
             self.wfile.write(json.dumps(response_data).encode('utf-8'))
-
         elif self.path == "/status":
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"OK")
-
         else:
             self.send_response(404)
             self.send_header("Content-type", "text/plain")
             self.end_headers()
             self.wfile.write(b"404 Not Found")
 
-with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
+Handler = MyHandler
+
+with socketserver.TCPServer(("", PORT), Handler) as httpd:
     print(f"Serving at port {PORT}")
     httpd.serve_forever()
