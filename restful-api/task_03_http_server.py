@@ -8,8 +8,8 @@ import json
 PORT = 8000
 class MyHandler(http.server.BaseHTTPRequestHandler):
     """Custom subclass for handling server requests"""
+
     def do_GET(self):
-        """Handles GET requests to the server all statements check the path of request"""
         if self.path == "/":
             self.send_response(200)
             self.send_header("Content-type", "text/plain")
