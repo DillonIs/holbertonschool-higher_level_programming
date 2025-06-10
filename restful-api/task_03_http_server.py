@@ -22,7 +22,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             self.end_headers()
             response_data = {
                 "name": "John",
-                "age": "30",
+                "age": 30,
                 "city": "New York"
             }
             self.wfile.write(json.dumps(response_data).encode('utf-8'))
