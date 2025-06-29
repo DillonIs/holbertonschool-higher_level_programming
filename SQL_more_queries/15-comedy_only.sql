@@ -1,7 +1,7 @@
 -- Lists all shows in the comedy genre
 SELECT title
 FROM tv_shows AS t
-INNER JOIN tv_show_genre AS m
+INNER JOIN tv_show_genres AS m
 ON t.id = m.show_id
 INNER JOIN tv_genres AS g
 ON m.genre_id = g.id
