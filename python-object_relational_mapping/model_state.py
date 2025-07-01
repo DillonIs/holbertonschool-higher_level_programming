@@ -9,6 +9,6 @@ Base = declarative_base()
 
 class State(Base):
     """Table creation"""
-    __statetable__ = 'states'
+    __tablename__ = 'states'
     id = Column(Integer, primary_key=True)
     name = Column(String(128))
