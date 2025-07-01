@@ -17,7 +17,7 @@ if __name__ == "__main__":
     # Create a cursor and execute a SQL query
     cursor = db.cursor()
 
-    #Sanitize by using %s (for script) in place of each variable
+    # Sanitize by using %s (for script) in place of each variable
     cursor.execute("""
                    SELECT * FROM states
                    WHERE name = BINARY %s
