@@ -20,7 +20,7 @@ if __name__ == "__main__":
     #Sanitize by using %s (for script) in place of each variable
     cursor.execute("""
                    SELECT * FROM states
-                   WHERE name = BINARY %
+                   WHERE name = BINARY %s
                    ORDER BY id ASC
                    """, (state_name,))
 
